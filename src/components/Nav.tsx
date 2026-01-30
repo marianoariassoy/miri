@@ -7,7 +7,7 @@ const Nav = ({ onClick }: { onClick: (id: string) => void }) => {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:block xl:mr-12">
+    <nav className="hidden lg:block xl:mr-8">
       <ul className="flex items-center gap-x-6 font-semibold">
         {nav.map((item) => (
           <li key={item.name}>
