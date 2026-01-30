@@ -19,8 +19,28 @@ const popinsSans = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "MC Disenio - Mirian Camisar",
+  description:
+    "Trabaje en una variedad de proyectos, desde branding y diseño editorial hasta web y animaciones en 2D. Tuve la oportunidad de experimentar tanto en el mundo analógico de libros y revistas como en el digital, y ahora estoy explorando las posibilidades de la inteligencia artificial.",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "https://mc.design",
+    title: "MC Dinserio - Mirian Camisar",
+    description:
+      "Trabaje en una variedad de proyectos, desde branding y diseño editorial hasta web y animaciones en 2D. Tuve la oportunidad de experimentar tanto en el mundo analógico de libros y revistas como en el digital, y ahora estoy explorando las posibilidades de la inteligencia artificial.",
+    images: [
+      {
+        url: "/images/bio.jpg",
+        width: 800,
+        height: 800,
+        alt: "Mirian Camisar",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
