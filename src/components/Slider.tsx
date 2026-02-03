@@ -2,23 +2,9 @@
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Forward } from "@/lib/icons";
+import { Home } from "../types";
 
-const Slider = () => {
-  const data = [
-    {
-      id: 1,
-      image: "https://picsum.photos/id/10/1920/1080",
-    },
-    {
-      id: 2,
-      image: "https://picsum.photos/id/11/1920/1080",
-    },
-    {
-      id: 3,
-      image: "https://picsum.photos/id/12/1920/1080",
-    },
-  ];
-
+const Slider = ({ data }: { data: Home[] }) => {
   const properties = {
     prevArrow: (
       <button className="ml-2 lg:ml-10 text-5xl hover:text-secondary">

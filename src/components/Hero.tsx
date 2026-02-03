@@ -2,8 +2,16 @@ import Button from "./Button";
 import Content from "./Content";
 import Slider from "./Slider";
 import Whatsapp from "./Whatsapp";
+import { Home } from "../types";
 
-const Hero = () => {
+const Hero = async () => {
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/home", {
+    cache: "no-store",
+  });
+
+  const data = (await response.json()) as Home[];
+  if (!data) return;
+
   return (
     <Content title="" bgColor="dark">
       <div
@@ -26,7 +34,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="lg:w-2/3">
-          <Slider />
+          <Slider data={data} />
         </div>
       </div>
 

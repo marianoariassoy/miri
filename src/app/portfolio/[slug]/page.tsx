@@ -1,34 +1,39 @@
 import Content from "@/components/Content";
+import { Portfolio } from "@/types";
 
-const page = () => {
+async function getServerSideProps(slug: string) {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/portfolio/${slug}`,
+  );
+  const data = await response.json();
+  if (!data) return null;
+  return data;
+}
+
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = (await getServerSideProps(slug)) as Portfolio;
+  if (!data) return null;
+
   return (
     <Content title="" bgColor="light">
-      <h1 className="font-bold text-2xl">Trabajo</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-        cupiditate minima! Soluta impedit id repudiandae nesciunt minus corrupti
-        blanditiis et tenetur perspiciatis cum, ipsum, nemo architecto mollitia
-        non laborum at.
-      </p>
+      <h1 className="font-bold text-2xl">{data.title}</h1>
+      {data.subtitle && (
+        <h2 className="text-xl font-semibold">{data.subtitle}</h2>
+      )}
+      <p className="whitespace-break-spaces">{data.text} </p>
       <div className="flex flex-col gap-y-4">
-        <img
-          src="https://picsum.photos/id/10/1920/1080"
-          className="w-full"
-          alt="Portfolio"
-        />
-        <img
-          src="https://picsum.photos/id/11/1920/1080"
-          className="w-full"
-          alt="Portfolio"
-        />
-        <img
-          src="https://picsum.photos/id/12/1920/1080"
-          className="w-full"
-          alt="Portfolio"
-        />
+        {data.images.map((item, index) => (
+          <img
+            key={item.id}
+            src={item.image}
+            alt={data.title}
+            className="w-full h-full object-cover object-center"
+          />
+        ))}
       </div>
     </Content>
   );
 };
 
-export default page;
+export default Page;
