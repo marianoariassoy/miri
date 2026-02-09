@@ -33,32 +33,32 @@ export const nav = [
 export const social = [
   {
     name: "Whatsapp",
-    href: "https://www.whatsapp.com/",
+    href: "https://wa.me/5493874822795",
     icon: Whatsapp,
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/mcdiseniografico",
     icon: Instagram,
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/mirian-camisar-5b637939/",
     icon: Linkedin,
   },
   {
     name: "Email",
-    href: "#",
+    href: "mcamisar@gmail.com",
     icon: Email,
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/mcdisenio?locale=es_LA&_rdc=1&_rdr#",
     icon: Facebook,
   },
   {
     name: "Behance",
-    href: "https://www.behance.net/",
+    href: "https://www.behance.net/mcamisar",
     icon: Behance,
   },
 ];

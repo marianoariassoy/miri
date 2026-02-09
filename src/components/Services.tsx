@@ -20,13 +20,14 @@ const Services = () => {
   return (
     <Content title="Servicios" bgColor="light">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-4xl mx-auto">
-        {data.map((item) => (
-          <article
-            key={item.title}
-            className="flex flex-col items-center gap-y-4"
-          >
+        {data.map((item, index) => (
+          <article key={index} className="flex flex-col items-center gap-y-4">
             <div className="bg-foreground shadow-2xl w-42 h-42 rounded-full flex items-center justify-center text-white">
-              <img src={item.icon} alt={item.title} className="h-1/2" />
+              <img
+                src={item.icon}
+                alt={item.title}
+                className={`h-1/2  ${index === 0 ? "translate-x-2" : ""}`}
+              />
             </div>
             <h2 className="font-bold">{item.title}</h2>
           </article>
