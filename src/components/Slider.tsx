@@ -32,7 +32,7 @@ const Slider = ({ data }: { data: Home[] }) => {
       {data.map((item) => (
         <div
           key={item.id}
-          className="w-full aspect-square lg:aspect-video bg-cover bg-center shadow-2xl"
+          className="w-full aspect-square lg:aspect-video bg-cover bg-center shadow-2xl rounded-2xl"
           style={{ backgroundImage: `url(${item.image})` }}
         />
       ))}

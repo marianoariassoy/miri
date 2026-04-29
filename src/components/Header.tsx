@@ -39,7 +39,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky w-screen top-0 z-50 bg-white/90 backdrop-blur-xl">
+    <header className="fixed w-screen top-0 z-50 bg-white/90 backdrop-blur-xl">
       <div
         className={`w-full max-w-1440px mx-auto transition-all ease-in-out px-4 lg:px-8 flex justify-between pb-6 relative ${scrolled ? "pt-6" : "pt-14"}`}
       >

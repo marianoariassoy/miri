@@ -94,7 +94,7 @@ const Page = () => {
             <button
               className={`bg-secondary h-12 text-white font-bold w-50 py-2 px-4 rounded-xl cursor-pointer hover:bg-foreground`}
             >
-              Contactanos
+              Contactame
             </button>
           )}
         </div>

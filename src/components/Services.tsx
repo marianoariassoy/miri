@@ -34,7 +34,7 @@ const Services = () => {
         ))}
       </div>
       <div className="flex justify-center mt-4">
-        <Button bgColor="dark" title="Contactanos" target="Contacto" />
+        <Button bgColor="dark" title="Contactame" target="Contacto" />
       </div>
     </Content>
   );

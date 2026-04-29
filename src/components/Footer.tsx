@@ -22,7 +22,7 @@ const Footer = () => {
           Ponemos foco en la creatividad, la exclusividad y la innovación de
           marcas.
         </p>
-        <Button bgColor="light" title="Contactanos" target="Contacto" />
+        <Button bgColor="light" title="Contactame" target="Contacto" />
       </div>
       <div className="flex flex-col items-center justify-center gap-y-8 px-4 py-8">
         <nav>
