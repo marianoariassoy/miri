@@ -17,7 +17,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <Content title="" bgColor="light">
-      <h1 className="font-bold text-2xl">{data.title}</h1>
+      <h1 className="font-bold text-2xl mt-4">{data.title}</h1>
       {data.subtitle && (
         <h2 className="text-xl font-semibold">{data.subtitle}</h2>
       )}

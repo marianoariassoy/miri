@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHome, setIsHome] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,6 +32,14 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    if (pathname === "/") {
+      setIsHome(true);
+    } else {
+      setIsHome(false);
+    }
+  }, [pathname]);
+
   const handleScroll = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -41,10 +50,12 @@ const Header = () => {
   return (
     <header className="fixed w-screen top-0 z-50 bg-white/90 backdrop-blur-xl">
       <div
-        className={`w-full max-w-1440px mx-auto transition-all ease-in-out px-4 lg:px-8 flex justify-between pb-6 relative ${scrolled ? "pt-6" : "pt-14"}`}
+        className={`w-full max-w-1440px mx-auto transition-all ease-in-out px-4 lg:px-8 flex justify-between pb-6 relative ${
+          !isHome ? "pt-6" : scrolled ? "pt-6" : "pt-14"
+        }`}
       >
         <div className="z-50 lg:translate-x-8">
-          {pathname === "/" ? (
+          {isHome ? (
             <button onClick={() => handleScroll("hero")}>
               <div
                 className={`absolute transition-all bg-foreground hover:scale-105 shadow-2xl rounded-full flex items-center justify-center text-white cursor-pointer ${scrolled ? "-translate-y-8 w-24 h-24 lg:h-30 lg:w-30" : "-translate-y-12 w-38 h-38 lg:h-48 lg:w-48"}`}
