@@ -67,7 +67,7 @@ const PortfolioModule = ({ data }: { data: Portfolio[] }) => {
       </button>
       <div
         ref={scrollRef}
-        className="flex items-center gap-x-4 overflow-x-auto pb-8 scroll-smooth no-scrollbar"
+        className="flex items-start gap-x-4 overflow-x-auto pb-8 scroll-smooth no-scrollbar"
       >
         {data.map((item, index) => (
           <article

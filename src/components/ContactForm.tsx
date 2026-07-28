@@ -23,7 +23,10 @@ const Page = () => {
     setSending(true);
 
     try {
-      const response = await axios.post("", data);
+      const response = await axios.post(
+        "https://backend.mcdisenio.com.ar/envia_contacto.php",
+        data,
+      );
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
@@ -44,7 +47,14 @@ const Page = () => {
 
   const errorMessage = "Este dato es obligatorio";
 
-  if (sended) return <div></div>;
+  if (sended)
+    return (
+      <div className="mb-8">
+        <h2 className="text-center text-2xl font-bold">
+          El mensaje fue enviado. <br /> Gracias por contactarme.
+        </h2>
+      </div>
+    );
 
   return (
     <div className="bg-white p-8 rounded-2xl text-foreground">
