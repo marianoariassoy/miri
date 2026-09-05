@@ -20,6 +20,9 @@ const popinsSans = Poppins({
 
 export const metadata: Metadata = {
   title: "MC Disenio - Mirian Camisar",
+  verification: {
+    google: "6o7V-a2s_HpMVqB3D9IKehgqnNwO13eF53YVJ7v4XDw",
+  },
   description:
     "Trabaje en una variedad de proyectos, desde branding y diseño editorial hasta web y animaciones en 2D. Tuve la oportunidad de experimentar tanto en el mundo analógico de libros y revistas como en el digital, y ahora estoy explorando las posibilidades de la inteligencia artificial.",
   icons: {
