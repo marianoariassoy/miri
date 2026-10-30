@@ -48,7 +48,7 @@ export const social = [
   },
   {
     name: "Email",
-    href: "mcamisar@gmail.com",
+    href: "mailto:mcamisar@gmail.com",
     icon: Email,
   },
   {

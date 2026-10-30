@@ -5,6 +5,7 @@ import "./animations.css";
 import "./hamburger.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 const latoSans = Lato({
   variable: "--font-lato-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <AnalyticsProvider />
       </body>
     </html>
   );
